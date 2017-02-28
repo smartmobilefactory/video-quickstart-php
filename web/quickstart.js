@@ -13,7 +13,7 @@ if (!navigator.webkitGetUserMedia && !navigator.mozGetUserMedia) {
 // from the room, if joined.
 window.addEventListener('beforeunload', leaveRoomIfJoined);
 
-$.getJSON('/token.php', function (data) {
+$.getJSON('token.php', function (data) {
   identity = data.identity;
 
   // Create a Video Client and connect to Twilio

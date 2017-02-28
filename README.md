@@ -22,10 +22,12 @@ or possibly your `~/.bash_profile`.
 Create a configuration file for your application:
 
 ```bash
-cp config.example.php config.php
+$ cp sample.htaccess web/.htacces
+$ flynn -a twiliovideodemo remote add
+$ flynn env
 ```
 
-Edit `config.php` with the four configuration parameters we gathered from above.
+Edit `web/.htacces` with the four configuration parameters we gathered from above.
 
 Next, we'll need to install the Twilio Helper library via [Composer](https://getcomposer.org/).
 
@@ -36,6 +38,7 @@ composer install
 Now we should be all set! Run the application using the `php -S` command.
 
 ```bash
+cd web
 php -S 127.0.0.1:8000
 ```
 

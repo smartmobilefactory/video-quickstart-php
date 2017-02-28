@@ -1,10 +1,15 @@
 <?php
-include('./vendor/autoload.php');
-include('./config.php');
+include('../vendor/autoload.php');
 include('./randos.php');
 
 use Twilio\Jwt\AccessToken;
 use Twilio\Jwt\Grants\VideoGrant;
+
+
+$TWILIO_ACCOUNT_SID = getenv('TWILIO_ACCOUNT_SID');
+$TWILIO_CONFIGURATION_SID = getenv('TWILIO_CONFIGURATION_SID');
+$TWILIO_API_KEY = getenv('TWILIO_API_KEY');
+$TWILIO_API_SECRET = getenv('TWILIO_API_SECRET');
 
 // An identifier for your app - can be anything you'd like
 $appName = 'TwilioVideoDemo';

@@ -1,3 +1,4 @@
 .DS_Store
-config.php
+web/config.php
 vendor
+.htaccess

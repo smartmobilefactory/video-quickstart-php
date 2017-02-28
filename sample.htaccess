@@ -1,0 +1,18 @@
+# Find values with $ flynn env
+
+
+SetEnv TWILIO_ACCOUNT_SID ""
+SetEnv TWILIO_API_KEY ""
+SetEnv TWILIO_API_SECRET ""
+SetEnv TWILIO_CONFIGURATION_SID ""
+
+
+RewriteEngine On
+RewriteBase /twiliovideo
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) /twiliovideo/$1 [L]
+Options +Indexes +FollowSymLinks +ExecCGI
+
+
